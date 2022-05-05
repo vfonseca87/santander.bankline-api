@@ -24,6 +24,9 @@ public class Movimentacao {
 	@Column (length = 100)
 	private String descricao;
 	
+	@Column (name = "numero_conta")
+	private Integer numeroConta;
+	
 	private Double valor;
 
 	@Enumerated (EnumType.STRING)
@@ -58,6 +61,12 @@ public class Movimentacao {
 	}
 	public void setTipo(MovimentacaoTipo tipo) {
 		this.tipo = tipo;
+	}
+	public Integer getNumeroConta() {
+		return numeroConta;
+	}
+	public void setNumeroConta(Integer numeroConta) {
+		this.numeroConta = numeroConta;
 	}
 	
 	
